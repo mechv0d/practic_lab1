@@ -1,0 +1,99 @@
+* {
+    filter: contrast(1) !important;
+}
+
+:root {
+    filter: contrast(1) !important;
+    font-family: var(--font-family), monospace;
+    font-optical-sizing: auto;
+    box-sizing: border-box !important;
+
+    --font-family: "Victor Mono";
+}
+
+body {
+    max-width: 1000px;
+    background-color: #111111;
+    color: #e1e1e1;
+    margin: 0 24px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    padding-bottom: 70px;
+    color: #939393;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+}
+
+.encrypt-div {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.encrypt-div label {
+    font-size: 18px;
+    text-align: center;
+}
+
+.main-text-area {
+    height: 100%;
+    min-height: 220px;
+    max-height: 700px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #2d2d2d;
+    color: #d5d5d5;
+    filter: contrast(1);
+    padding: 16px;
+    font-family: var(--font-family), monospace;
+    font-size: 16px;
+}
+
+.encrypt-div textarea {
+    resize: vertical;
+}
+
+textarea, textarea:hover, textarea:focus, button, button:focus, button:hover {
+    outline: none;
+    border: none;
+}
+
+button {
+    width: fit-content;
+    min-width: 60px;
+    background-color: #727272;
+    font-family: var(--font-family), monospace;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    filter: contrast(1);
+}
+button:hover {
+    background-color: #9f9f9f;
+}
+
+#output-text {
+    display: block;
+    scroll-behavior: smooth;
+    overflow: auto;
+    /*font-style: italic;*/
+    margin: 0;
+}
