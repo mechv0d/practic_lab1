@@ -78,11 +78,10 @@ function outputEncrypted(data) {
     // opList.innerHTML = opList.innerHTML.slice(0, -1)+'.';
 }
 
-function submitButtonLogic(el) {
+function submitButtonLogic() {
     let textArea = document.querySelector('#user_text');
 
     if (textArea.value !== '') {
-        let outputText = document.querySelector('#output-text');
         let data = encrypt_ROT13(textArea.value);
         outputEncrypted(data)
 
