@@ -80,6 +80,11 @@ h1, h2 {
     box-shadow: var(--color-box-shadow) 0 0 24px 0;
 }
 
+.forms-container .centered {
+    justify-content: center;
+    align-items: center;
+}
+
 .forms-container .line {
     width: 100%;
     height: fit-content;
@@ -206,6 +211,10 @@ h1, h2 {
     justify-content: center;
     gap: 1vw;
     margin: 4em 0 3em 0;
+}
+
+.info-container.vertical {
+    flex-direction: column;
 }
 
 .info-container .description {

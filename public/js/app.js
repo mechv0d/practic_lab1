@@ -21,9 +21,9 @@ function encrypt_ROT13(text) {
 
             if (targetArray.includes(letter)) {
                 let newIndex = 0
-                for (let i = 0; i < targetArray.length; i++) {
-                    if (targetArray[i] === letter) {
-                        newIndex = i + rot13_range;
+                for (let j = 0; j < targetArray.length; j++) {
+                    if (targetArray[j] === letter) {
+                        newIndex = j + rot13_range;
                         break;
                     }
                 }

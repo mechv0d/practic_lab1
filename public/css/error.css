@@ -1,0 +1,23 @@
+.error-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.page-wrapper {
+    margin-bottom: 200px;
+}
+
+.page-wrapper.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.centered {
+    text-align: center;
+}
+
+.image {
+    box-shadow: none !important;
+    width: 144px !important;
+}
