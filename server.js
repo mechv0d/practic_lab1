@@ -6,8 +6,6 @@ const port = 3000;
 const publicDirName = 'public';
 const rootDir = path.join(__dirname, publicDirName);
 
-let debug = true;
-
 // ОТДЕЛЬНАЯ ФУНКЦИЯ ДЛЯ ВОЗВРАТА СЕРВЕРНОЙ ОШИБКИ
 const writeError_500 = (res) => {
     res.writeHead(500, {'Content-Type': 'text/plain'});
@@ -16,7 +14,6 @@ const writeError_500 = (res) => {
 
 const server = http.createServer((req, res) => {
     let filePath = path.join(rootDir, req.url === '/' ? 'index.html' : req.url) // путь файла из запроса
-    if (debug) console.log(filePath);
 
     // Читаем файлик
     fs.readFile(filePath, (rfErr, data) => {
@@ -49,6 +46,5 @@ const server = http.createServer((req, res) => {
 
 // ЗАПУСКАЕМ ПЛОД НЕВЗАИМНОЙ ЛЮБВИ
 server.listen(port, 'localhost', () => {
-
-        console.log(`Сервер запущен успешно на http://localhost:${port}`);
+    console.log(`Сервер запущен успешно на http://localhost:${port}`);
 });
