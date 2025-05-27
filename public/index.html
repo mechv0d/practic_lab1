@@ -6,6 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <script src="js/logicMod/logicMod.js"></script>-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +26,8 @@
 </head>
 <body>
 <div id="#page-wrapper" class="page-wrapper">
-    <h1>ДЕ<span class="pink">/</span>ШИФРАТОР</h1>
-    <h2>Формат: ROT13</h2>
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
     <div>
         <section id="forms" class="forms-container">
             <div class="circles">
@@ -49,13 +50,14 @@
             </div>
             <div class="line">
                 <div class="encrypt-div">
-                    <label for="user_text">Текст для шифровки</label>
+                    <label id="tt_0" for="user_text"></label>
                     <textarea id="user_text" class="main-text-area" placeholder="Введите текст..."></textarea>
-                    <button type="submit" onclick="submitButtonLogic(this)">Зашифровать
+                    <button onclick="copyButtonLogic(this)">Скопировать
                     </button>
                 </div>
-                <div id="output-div" class="encrypt-div" style="visibility:collapse;">
-                    <label>Готовый шифр:</label>
+
+                <div id="output-div" class="encrypt-div" style="display: none;">
+                    <label id="tt_1"></label>
                     <p id="output-text" class="main-text-area"></p>
                     <button onclick="copyButtonLogic(this)">Скопировать
                     </button>
@@ -77,18 +79,13 @@
 
     <section class="info-container">
         <img src="/assets/cyberpunk.png" alt="Encrypt Image" draggable="false">
-        <p class="description">ROT13 — это простой шифр подстановки, который заменяет каждую букву алфавита на 13-ю по
-            счёту после неё:<br>(A →
-            N, B → O, ..., M → Z, N → A и т. д.). <br><br>Он работает только с латинскими буквами, а цифры и символы
-            оставляет
-            без изменений. <br><br>Особенность ROT13 в том, что это обратимый шифр: повторное применение ROT13
-            возвращает
-            исходный текст. Изначально он использовался в интернете для сокрытия спойлеров и шуток, а не для реальной
-            защиты данных.</p>
+        <p id="big-desc" class="description"></p>
     </section>
 </div>
 <footer>
-    <p class="year">mechv0d · 2O25</p>
+    <p id="footer-year" class="year">mechv0d ·</p>
 </footer>
+<script>fastFetch();
+AddTextAreaEvent();</script>
 </body>
 </html>
